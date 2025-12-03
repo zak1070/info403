@@ -1,8 +1,10 @@
+package src;
+
 /**
  * A terminal symbol, a.k.a. a letter in the grammar.
  */
-public enum LexicalUnit{
-   /** [ProgName] */
+public enum LexicalUnit {
+    /** [ProgName] */
     PROGNAME,
     /** [VarName] */
     VARNAME,
@@ -68,202 +70,201 @@ public enum LexicalUnit{
      * 
      * @return a String containing the terminal type (word or abstract expression).
      */
-     @Override
+    @Override
     public String toString() {
-        String n=this.name();
+        String n = this.name();
         switch (this) {
             case PROGNAME:
-                n="[ProgName]";
+                n = "[ProgName]";
                 break;
             case VARNAME:
-                n="[VarName]";
+                n = "[VarName]";
                 break;
             case NUMBER:
-                n="[Number]";
+                n = "[Number]";
                 break;
             case PROG:
-                n="Prog";
+                n = "Prog";
                 break;
             case IS:
-                n="Is";
+                n = "Is";
                 break;
             case END:
-                n="End";
+                n = "End";
                 break;
             case SEMI:
-                n=";";
+                n = ";";
                 break;
             case ASSIGN:
-                n="=";
+                n = "=";
                 break;
             case LPAREN:
-                n="(";
+                n = "(";
                 break;
             case RPAREN:
-                n=")";
+                n = ")";
                 break;
             case MINUS:
-                n="-";
+                n = "-";
                 break;
             case PLUS:
-                n="+";
+                n = "+";
                 break;
             case TIMES:
-                n="*";
+                n = "*";
                 break;
             case DIVIDE:
-                n="/";
+                n = "/";
                 break;
             case IF:
-                n="If";
+                n = "If";
                 break;
             case THEN:
-                n="Then";
+                n = "Then";
                 break;
             case ELSE:
-                n="Else";
+                n = "Else";
                 break;
             case LBRACK:
-                n="{";
+                n = "{";
                 break;
             case RBRACK:
-                n="}";
+                n = "}";
                 break;
             case IMPLIES:
-                n="->";
+                n = "->";
                 break;
             case PIPE:
-                n="|";
+                n = "|";
                 break;
             case EQUAL:
-                n="=";
+                n = "=";
                 break;
             case SMALLER:
-                n="<";
+                n = "<";
                 break;
             case SMALEQ:
-                n="<=";
+                n = "<=";
                 break;
             case WHILE:
-                n="While";
+                n = "While";
                 break;
             case DO:
-                n="Do";
+                n = "Do";
                 break;
             case PRINT:
-                n="Print";
+                n = "Print";
                 break;
             case INPUT:
-                n="Input";
+                n = "Input";
                 break;
             case EOS:
-                n="EOS";
+                n = "EOS";
                 break;
             case EPSILON:
-                n="/epsilon/";
+                n = "/epsilon/";
                 break;
         }
         return n;
     }
-    
-    
+
     /**
      * Returns the LaTeX code representing the terminal.
      * 
      * @return a String containing the LaTeX code for the terminal.
      */
     public String toTexString() {
-        String n=this.name();
+        String n = this.name();
         switch (this) {
             case PROGNAME:
-                n="ProgName";
+                n = "ProgName";
                 break;
             case VARNAME:
-                n="VarName";
+                n = "VarName";
                 break;
             case NUMBER:
-                n="Number";
+                n = "Number";
                 break;
             case PROG:
-                n="\\texttt{Prog}";
+                n = "\\texttt{Prog}";
                 break;
             case IS:
-                n="\\texttt{Is}";
+                n = "\\texttt{Is}";
                 break;
             case END:
-                n="\\texttt{End}";
+                n = "\\texttt{End}";
                 break;
             case SEMI:
-                n="\\texttt{;}";
+                n = "\\texttt{;}";
                 break;
             case ASSIGN:
-                n="\\texttt{=}";
+                n = "\\texttt{=}";
                 break;
             case LPAREN:
-                n="\\texttt{(}";
+                n = "\\texttt{(}";
                 break;
             case RPAREN:
-                n="\\texttt{)}";
+                n = "\\texttt{)}";
                 break;
             case MINUS:
-                n="\\texttt{-}";
+                n = "\\texttt{-}";
                 break;
             case PLUS:
-                n="\\texttt{+}";
+                n = "\\texttt{+}";
                 break;
             case TIMES:
-                n="\\texttt{*}";
+                n = "\\texttt{*}";
                 break;
             case DIVIDE:
-                n="\\texttt{/}";
+                n = "\\texttt{/}";
                 break;
             case IF:
-                n="\\texttt{if}";
+                n = "\\texttt{if}";
                 break;
             case THEN:
-                n="\\texttt{then}";
+                n = "\\texttt{then}";
                 break;
             case ELSE:
-                n="\\texttt{else}";
+                n = "\\texttt{else}";
                 break;
             case LBRACK:
-                n="\\texttt{\\{}";
+                n = "\\texttt{\\{}";
                 break;
             case RBRACK:
-                n="\\texttt{\\}}";
+                n = "\\texttt{\\}}";
                 break;
             case IMPLIES:
-                n="\\texttt{->}";
+                n = "\\texttt{->}";
                 break;
             case PIPE:
-                n="\\texttt{|}";
+                n = "\\texttt{|}";
                 break;
             case EQUAL:
-                n="\\texttt{=}";
+                n = "\\texttt{=}";
                 break;
             case SMALEQ:
-                n="\\texttt{<=}";
+                n = "\\texttt{<=}";
                 break;
             case SMALLER:
-                n="\\texttt{<}";
+                n = "\\texttt{<}";
                 break;
             case WHILE:
-                n="\\texttt{While}";
+                n = "\\texttt{While}";
                 break;
             case DO:
-                n="\\texttt{Do}";
+                n = "\\texttt{Do}";
                 break;
             case PRINT:
-                n="\\texttt{Print}";
+                n = "\\texttt{Print}";
                 break;
             case INPUT:
-                n="\\texttt{Input}";
+                n = "\\texttt{Input}";
                 break;
             case EOS:
-                n="EOS";
+                n = "EOS";
                 break;
             case EPSILON:
-                n="$\\varepsilon$";
+                n = "$\\varepsilon$";
                 break;
         }
         return n;

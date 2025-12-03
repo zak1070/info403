@@ -1,3 +1,5 @@
+package src;
+
 /**
  * A non-terminal symbol, a.k.a. a variable in the grammar.
  */
@@ -40,22 +42,23 @@ public enum NonTerminal {
     SimpleCond,
     /** &lt;Comp&gt; */
     Comp;
-    
+
     /**
-     * Returns a string representation of the non-terminal (without the surrounding &lt;&nbsp;&gt;).
+     * Returns a string representation of the non-terminal (without the surrounding
+     * &lt;&nbsp;&gt;).
      * 
      * @return a String representing the non-terminal.
      */
     @Override
     public String toString() {
-        String n=this.name();
-        String realName=n;
+        String n = this.name();
+        String realName = n;
         if (n.endsWith("Prime")) {
-            realName=n.substring(0,n.length()-5)+"'";
+            realName = n.substring(0, n.length() - 5) + "'";
         }
         return realName;
     }
-    
+
     /**
      * Returns th LaTeX code to represent the non-terminal.
      * 
@@ -64,6 +67,6 @@ public enum NonTerminal {
      * @return a String representing LaTeX code for the non-terminal.
      */
     public String toTexString() {
-        return "\\textsf{$\\langle$"+this.toString()+"$\\rangle$}";
+        return "\\textsf{$\\langle$" + this.toString() + "$\\rangle$}";
     }
 }

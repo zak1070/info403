@@ -1,0 +1,26 @@
+!! Euclid's algorithm !!
+!! Comments are ignored by the scanner !!
+Prog Euclidean_algorithm Is  !! start program !!
+  Input(a); $ input a
+  Input(b); $ Input(b)
+  While {0 < b} Do
+      c = b;
+      While {b <= a} Do  !! 
+      
+      
+      
+                operation 
+      
+      
+      
+      
+                        !!      
+                        
+                         $ Computation of modulo
+        a = a-b;
+      End;
+      b = a;
+      a = c;
+  End;
+  Print(a);
+End

@@ -1,0 +1,40 @@
+\contentsline {section}{\numberline {1}Introduction}{3}{section.1}%
+\contentsline {section}{\numberline {2}Objectives of Part 2}{3}{section.2}%
+\contentsline {section}{\numberline {3}Original Grammar of yaLcc}{3}{section.3}%
+\contentsline {section}{\numberline {4}Grammar Transformation Steps}{5}{section.4}%
+\contentsline {subsection}{\numberline {4.1}(a) Removing Unproductive and Unreachable Variables}{5}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}(b) Resolving Ambiguity: Operator Precedence and Associativity}{5}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}(c) Removing Left Recursion and Applying Factorization}{6}{subsection.4.3}%
+\contentsline {section}{\numberline {5}Final Grammar}{6}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Introduction to the Final Grammar}{6}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Complete final grammar}{7}{subsection.5.2}%
+\contentsline {section}{\numberline {6}FIRST and FOLLOW Sets}{7}{section.6}%
+\contentsline {paragraph}{FIRST sets.}{7}{section*.3}%
+\contentsline {paragraph}{FOLLOW sets.}{8}{section*.4}%
+\contentsline {subsection}{\numberline {6.1}FIRST sets}{8}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}FOLLOW sets}{9}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}LL(1) Grammar Verification and Final Form}{9}{subsection.6.3}%
+\contentsline {section}{\numberline {7}Justification that the Grammar is LL(1)}{10}{section.7}%
+\contentsline {section}{\numberline {8}LL(1) Action Table and Justification}{12}{section.8}%
+\contentsline {paragraph}{Note on the structure of the LL(1) table.}{17}{section*.45}%
+\contentsline {section}{\numberline {9}Complete Action table}{19}{section.9}%
+\contentsline {section}{\numberline {10}Implementation of the LL(1) Parser}{19}{section.10}%
+\contentsline {subsection}{\numberline {10.1}Design of the Parser Class}{19}{subsection.10.1}%
+\contentsline {paragraph}{Method structure.}{20}{section*.51}%
+\contentsline {paragraph}{Example: arithmetic expressions.}{20}{section*.52}%
+\contentsline {paragraph}{FIRST/FOLLOW utility methods.}{20}{section*.53}%
+\contentsline {subsection}{\numberline {10.2}Construction of the Parse Tree}{20}{subsection.10.2}%
+\contentsline {subsection}{\numberline {10.3}Extension of the \texttt {Symbol} Class}{21}{subsection.10.3}%
+\contentsline {subsection}{\numberline {10.4}Role of the \texttt {Main} Class}{22}{subsection.10.4}%
+\contentsline {subsection}{\numberline {10.5}Summary}{22}{subsection.10.5}%
+\contentsline {section}{\numberline {11}Testing and Validation}{23}{section.11}%
+\contentsline {subsection}{\numberline {11.1}11.1 Testing Methodology}{23}{subsection.11.1}%
+\contentsline {subsection}{\numberline {11.2}Example Test: \texttt {TooMuchSpace.ycc}}{23}{subsection.11.2}%
+\contentsline {subsection}{\numberline {11.3}Other example Test: \texttt {WhileOne.ycc}}{24}{subsection.11.3}%
+\contentsline {subsection}{\numberline {11.4}Discussion of Correctness}{25}{subsection.11.4}%
+\contentsline {paragraph}{Correct handling of whitespace.}{25}{section*.56}%
+\contentsline {paragraph}{Correct rule selection using FIRST and FOLLOW.}{25}{section*.57}%
+\contentsline {paragraph}{Correct behaviour of right recursion.}{25}{section*.58}%
+\contentsline {paragraph}{Structural compliance with the final grammar.}{25}{section*.59}%
+\contentsline {subsection}{\numberline {11.5}Summary of Test Results}{25}{subsection.11.5}%
+\contentsline {section}{\numberline {12}Conclusion}{26}{section.12}%
