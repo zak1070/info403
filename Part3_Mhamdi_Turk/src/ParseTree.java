@@ -19,47 +19,77 @@ import java.util.ArrayList;
  */
 
 public class ParseTree {
-   private Symbol label;
+    /**
+     * The label of the root of the tree.
+     */
+    private Symbol label;
+
+    /**
+     * The list of childrens of the root node, which are trees themselves.
+     */
     private List<ParseTree> children;
 
+    /**
+     * Creates a singleton tree with only a root labeled by lbl.
+     * 
+     * @param lbl The label of the root
+     */
     public ParseTree(Symbol lbl) {
         this.label = lbl;
-        this.children = new ArrayList<ParseTree>();
+        this.children = new ArrayList<ParseTree>(); // This tree has no children
     }
 
+    /**
+     * Creates a singleton tree with only a root labeled by terminal lbl.
+     * 
+     * @param lbl The label of the root
+     */
     public ParseTree(LexicalUnit lbl) {
         this.label = new Symbol(lbl);
-        this.children = new ArrayList<ParseTree>();
+        this.children = new ArrayList<ParseTree>(); // This tree has no children
     }
 
+    /**
+     * Creates a singleton tree with only a root labeled by variable lbl.
+     * 
+     * @param lbl The label of the root
+     */
     public ParseTree(NonTerminal lbl) {
         this.label = new Symbol(null, lbl);
-        this.children = new ArrayList<ParseTree>();
+        this.children = new ArrayList<ParseTree>(); // This tree has no children
     }
 
+    /**
+     * Creates a tree with root labeled by lbl and children chdn.
+     * 
+     * @param lbl  The label of the root
+     * @param chdn Its children
+     */
     public ParseTree(Symbol lbl, List<ParseTree> chdn) {
         this.label = lbl;
         this.children = chdn;
     }
 
+    /**
+     * Creates a tree with root labeled by terminal lbl and children chdn.
+     * 
+     * @param lbl  The label of the root
+     * @param chdn Its children
+     */
     public ParseTree(LexicalUnit lbl, List<ParseTree> chdn) {
         this.label = new Symbol(lbl);
         this.children = chdn;
     }
 
+    /**
+     * Creates a tree with root labeled by variable lbl and children chdn.
+     * 
+     * @param lbl  The label of the root
+     * @param chdn Its children
+     */
     public ParseTree(NonTerminal lbl, List<ParseTree> chdn) {
         this.label = new Symbol(null, lbl);
         this.children = chdn;
-    }
-
-    // --- AJOUTS INDISPENSABLES POUR ASTBUILDER ---
-    
-    public Symbol getLabel() {
-        return this.label;
-    }
-
-    public List<ParseTree> getChildren() {
-        return this.children;
     }
 
     /* Pure LaTeX version (using the forest package) */
@@ -183,5 +213,14 @@ public class ParseTree {
      */
     public String toLaTeX() {
         return this.toLaTeXusingForest();
+    }
+
+    // Ajoute ceci dans src/ParseTree.java
+    public Symbol getLabel() {
+        return this.label;
+    }
+
+    public List<ParseTree> getChildren() {
+        return this.children;
     }
 }
