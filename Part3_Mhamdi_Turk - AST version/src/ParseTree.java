@@ -214,4 +214,13 @@ public class ParseTree {
     public String toLaTeX() {
         return this.toLaTeXusingForest();
     }
+
+    // Ajoute ceci dans src/ParseTree.java
+    public Symbol getLabel() {
+        return this.label;
+    }
+
+    public List<ParseTree> getChildren() {
+        return this.children;
+    }
 }

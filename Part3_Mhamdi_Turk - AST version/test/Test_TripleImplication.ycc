@@ -1,0 +1,11 @@
+!! Test of implication operator !!
+
+Prog Test_TripleImplication Is
+  If { 1 < 2 -> 3 <= 4 -> |5 == 5| } Then
+    Input(a); 
+    Print(a);
+  Else
+    Input(b);  $ This line mentions End and While
+    Print(b);
+  End;
+End

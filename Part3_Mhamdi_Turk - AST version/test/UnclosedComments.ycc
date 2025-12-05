@@ -1,0 +1,5 @@
+Prog TestUnclosed Is
+  Input(a);
+  !! This doesnt close
+  a = a + 1;
+End
